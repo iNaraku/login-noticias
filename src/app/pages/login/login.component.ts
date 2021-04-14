@@ -35,7 +35,6 @@ export class LoginComponent implements OnInit {
     if (  form.invalid ) { return; }
 
     Swal.fire({
-      title: 'Error!',
       text: 'Espere por favor...',
       icon: 'info',
       allowOutsideClick: false

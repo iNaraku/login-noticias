@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../../models/noticias.model';
 import { NoticiasService } from '../../services/noticias.service';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +13,21 @@ export class HomeComponent implements OnInit {
 
   noticias: Article[] = [];
 
-  constructor( private noticiasService: NoticiasService) {
+  constructor( private noticiasService: NoticiasService,
+    private auth: AuthService,
+    private router: Router) {
 
   }
 
   ngOnInit() {
     this.cargarNoticias();
+  }
+
+  salir() {
+
+    this.auth.logout();
+    this.router.navigateByUrl('/login');
+
   }
 
   loadData( event ) {
