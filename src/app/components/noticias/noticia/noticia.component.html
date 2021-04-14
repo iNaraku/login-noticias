@@ -1,0 +1,10 @@
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="noticia.urlToImage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ noticia.title }} </h5>
+      <p class="card-text">
+        {{ noticia.description }}
+      </p>
+      <a [href]="noticia.url" target="_blank" class="btn btn-primary">Ver mas</a>
+    </div>
+  </div>
