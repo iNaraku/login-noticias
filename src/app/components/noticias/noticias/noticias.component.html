@@ -1,3 +1,29 @@
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="0" (click)="cargarNoticias()">Your Location Country</mat-button-toggle>
+      <mat-button-toggle value="1" (click)="cargarNoticias('us')">International</mat-button-toggle>
+      <mat-button-toggle value="2" (click)="cargarNoticias()">Local</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="col-md-6">
+    <input type="date" class="form-control" [(ngModel)]="date" (change)="cargarNoticias()" />
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" class="form-control" placeholder="Buscar noticia"
+    [(ngModel)]="keywork" (ngModelChange)="buscarPalabraClave()"/>
+  </div>
+</div>
+
+<br>
+
 <div class="row">
   <div class="col-12 col-lg-4 col-md-4 col-sm-6 col-xs-12"
   *ngFor="let noticia of noticias; let i = index">

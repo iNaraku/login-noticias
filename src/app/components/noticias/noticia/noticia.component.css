@@ -1,13 +1,12 @@
-.card-text {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
 
-.card-body {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+mat-card {
+    margin-bottom: 10px;
+}
+.nowrap {
+    width:300px;
+    text-overflow:ellipsis;
+    white-space:nowrap; 
+    overflow:hidden; 
 }
 
 img {
